@@ -1,4 +1,4 @@
-BitLinks is a modern and efficient URL shortening application built using React, Vite, JavaScript, HTML, and TailwindCSS.
+BitLinks is a modern and efficient URL shortening application.
 Designed with simplicity and performance in mind, BitLinks allows users to convert long URLs into clean, shareable short links through a fast, responsive, and minimal interface.
 
 ✨ Features
