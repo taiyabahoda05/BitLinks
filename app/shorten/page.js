@@ -27,11 +27,14 @@ const requestOptions = {
 fetch("/api/generate", requestOptions)
   .then((response) => response.json())
   .then((result) => {
-    setGenerated(`${process.env.NEXT_PUBLIC_HOST}/${shorturl}`)
+    if (!result.success) {
+      alert(result.message)
+      return
+    }
+
+    setGenerated(`${window.location.origin}/${shorturl}`)
     seturl("")
     setshorturl("")
-  
-    console.log(result)
     alert(result.message)
   })
   .catch((error) => console.error(error));
