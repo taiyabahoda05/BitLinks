@@ -2,7 +2,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div className=' bg-purple-100 mx-auto max-w-4xl p-8 my-16 flex flex-col gap-6 rounded-lg'>
+    <div className='mx-auto my-8 flex w-[calc(100%-2rem)] max-w-4xl flex-col gap-6 rounded-lg bg-purple-100 p-5 sm:my-12 sm:w-[calc(100%-3rem)] sm:p-8'>
       <h1 className='flex font-bold text-xl justify-center'>About BitLinks</h1>
       <p className='text-lg'>Welcome to BitLinks — your smart, simple, and reliable way to shorten, share, and track URLs.At BitLinks, we believe that every link tells a story. Whether you’re sharing a post, promoting a brand, or tracking campaign performance, our goal is to make your links more powerful, efficient, and meaningful.</p>
 

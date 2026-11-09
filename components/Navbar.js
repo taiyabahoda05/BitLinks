@@ -1,25 +1,37 @@
-import React from 'react'
-import Link from 'next/link'
+import Link from "next/link";
 
 const Navbar = () => {
   return (
-      <nav className="h-16 bg-purple-700 text-white flex items-center justify-between px-3">
-        <div className='logo font-bold text-lg'>
-            <Link href="/">BitLinks</Link>
+    <nav className="bg-purple-700 text-white">
+      <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+        <Link href="/" className="text-center text-lg font-bold sm:text-left">
+          BitLinks
+        </Link>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
+          <ul className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm sm:gap-5 sm:text-base">
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/about">About</Link></li>
+            <li><Link href="/shorten">Shorten</Link></li>
+            <li><Link href="/contact">Contact Us</Link></li>
+          </ul>
+          <div className="flex justify-center gap-2">
+            <Link
+              href="/shorten"
+              className="rounded-lg bg-purple-500 px-3 py-1 font-bold shadow-lg"
+            >
+              Try Now
+            </Link>
+            <Link
+              href="/github"
+              className="rounded-lg bg-purple-500 px-3 py-1 font-bold shadow-lg"
+            >
+              GitHub
+            </Link>
+          </div>
         </div>
-        <ul className='flex items-center gap-4 justify-center'>
-          <Link href="/"><li>Home</li></Link>
-          <Link href="/about"><li>About</li></Link>
-          <Link href="/shorten"><li>Shorten</li></Link>
-          <Link href="/contact"><li>Contact Us</li></Link>
-          <li className='flex gap-3'>
-            <Link href="/shorten"><button className='bg-purple-500 shadow-lg rounded-lg p-3 py-1 font-bold cursor-pointer'>Try Now</button></Link>
-            <Link href="/github"><button className='bg-purple-500 rounded-lg shadow-lg p-3 py-1 font-bold cursor-pointer'>GitHub</button></Link>
-          </li>
-        </ul>
-      </nav>
-  
-  )
-}
+      </div>
+    </nav>
+  );
+};
 
-export default Navbar
+export default Navbar;
